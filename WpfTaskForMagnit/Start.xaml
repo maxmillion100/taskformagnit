@@ -1,0 +1,88 @@
+﻿<Page x:Class="WpfTaskForMagnit.Start"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfTaskForMagnit"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Start">
+
+    <Page.Resources>
+        <ControlTemplate TargetType="Button" x:Key="TemplateForButtons">
+            <Border CornerRadius="2"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            Background="{TemplateBinding Background}"
+                            Height="{TemplateBinding Height}"
+                            Width="{TemplateBinding Width}" 
+                            RenderTransformOrigin="0.5,0.5">
+
+                <Border.RenderTransform>
+                    <ScaleTransform></ScaleTransform>
+                </Border.RenderTransform>
+                <ContentControl Margin="{TemplateBinding Padding}"
+                                        HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                        VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                        Content="{TemplateBinding Content}" 
+                                        Foreground="White" />
+                <VisualStateManager.VisualStateGroups>
+                    <VisualStateGroup Name="CommonStates">
+                        <VisualState Name="Normal"/>
+                        <VisualState Name="Pressed">
+                            <Storyboard>
+
+
+                                <DoubleAnimation Storyboard.TargetProperty="RenderTransform.(ScaleTransform.ScaleX)" 
+                                                             To="0.95" Duration="0:0:0.3"></DoubleAnimation>
+                                <DoubleAnimation Storyboard.TargetProperty="RenderTransform.(ScaleTransform.ScaleY)" 
+                                                             To="0.95" Duration="0:0:0.3"></DoubleAnimation>
+                                <DoubleAnimation Storyboard.TargetProperty="RenderTransform.(ScaleTransform.ScaleY)" 
+                                                         To="0.95" Duration="0:0:0.3"></DoubleAnimation>
+
+                            </Storyboard>
+                        </VisualState>
+                    </VisualStateGroup>
+
+                </VisualStateManager.VisualStateGroups>
+
+            </Border>
+        </ControlTemplate>
+    </Page.Resources>
+    <Grid>
+
+        <StackPanel Orientation="Horizontal"
+                    Margin="30,30,0,0">
+
+            <!--<TextBox x:Name="textForRowCell"
+                HorizontalAlignment="Center"
+                VerticalAlignment="top"
+                Width="100"
+                Background="LightBlue"
+                BorderBrush="Black"
+                Panel.ZIndex="90"
+                FontSize="12"
+                >
+            </TextBox>-->
+            <Button 
+                HorizontalAlignment="Center"
+                VerticalAlignment="top"
+                Width="100"
+                Background="LightBlue"
+                BorderBrush="Black"
+                Panel.ZIndex="90"
+                FontSize="12"
+                Template="{StaticResource TemplateForButtons}"
+                Click="ButtonSteps_OnClick">Пошагово
+            </Button>
+        </StackPanel>
+        
+        <DataGrid Name="gridEmployees" 
+                  ItemsSource="{Binding}" 
+                  
+                  Margin="0,100,0,0">
+        </DataGrid>
+    </Grid>
+</Page>
+
+

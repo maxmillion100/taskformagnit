@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30011.22
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfTaskForMagnit", "WpfTaskForMagnit\WpfTaskForMagnit.csproj", "{B2769777-E99E-4877-B796-F57A30CB7FF5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B2769777-E99E-4877-B796-F57A30CB7FF5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B2769777-E99E-4877-B796-F57A30CB7FF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B2769777-E99E-4877-B796-F57A30CB7FF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B2769777-E99E-4877-B796-F57A30CB7FF5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5D7C1CFD-83E0-46E4-BDC0-824AFEEA1CCF}
+	EndGlobalSection
+EndGlobal
